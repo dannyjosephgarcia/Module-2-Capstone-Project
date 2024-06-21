@@ -5,6 +5,7 @@ class InternalRoutesModel:
     def __init__(self, request):
         self.validate_internal_routes_request(request)
         # TODO: Extract the 'firstName' field from the request and store it as an attribute called 'self.first_name'
+        # ================================ YOUR CODE HERE ============================== #
 
     @staticmethod
     def validate_internal_routes_request(request):
