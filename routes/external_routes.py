@@ -1,10 +1,13 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify, request
 from container import Container
 from dependency_injector.wiring import Provide, inject
 from models.external_routes_model import ExternalRoutesModel
 
 # TODO: Provide the correct arguments to the Blueprint class (there should be two of them)
-external_routes_blueprint = Blueprint()
+# ================================ YOUR CODE HERE ============================== #
+
+
+external_routes_blueprint = Blueprint('external_routes_blueprint', __name__)
 
 
 @external_routes_blueprint.route('/call_external_api')

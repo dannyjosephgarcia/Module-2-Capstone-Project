@@ -1,5 +1,6 @@
 import logging
 
+from flask import abort
 
 class InternalRoutesModel:
     def __init__(self, request):
@@ -7,10 +8,13 @@ class InternalRoutesModel:
         # TODO: Extract the 'firstName' field from the request and store it as an attribute called 'self.first_name'
         # ================================ YOUR CODE HERE ============================== #
 
+        self.first_name = request['firstName']
+
     @staticmethod
     def validate_internal_routes_request(request):
         if 'firstName' not in request:
             logging.error('The firstName field is a required field')
+            # raise ValueError('The firstName field is a required field')
             raise ValueError('The firstName field is a required field')
         if not isinstance(request['firstName'], str):
             raise TypeError('The firstName field must be of a string datatype')

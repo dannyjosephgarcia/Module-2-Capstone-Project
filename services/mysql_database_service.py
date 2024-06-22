@@ -16,11 +16,19 @@ class MySQLDatabaseService:
                                            host=self.host,
                                            database=self.database)
 
-    def execute_internal_route_query(self, request):
-        # TODO: Complete this class method to return the firstName field of the individual(s) contained in the request.
-        #  Note: in the event that more than one individual is returned, return the name found at index 0
+    def execute_internal_route_query(self, first_name):
+        # TODO: Complete this class method to return the first and last name of the individual contained in the request.
+        #  Note: in the event that more than one individual is returned, return the names found at index 0
         # ================================ YOUR CODE HERE ============================== #
-
-        names = []
-        first_name = names[0]
-        return first_name
+        cursor = self.cnx.cursor()
+        query = """SELECT * FROM sakila.actor WHERE first_name=%s;"""
+        cursor.execute(query, [first_name])
+        result = cursor.fetchall()
+        cursor.close()
+        self.cnx.close()
+        first_name = []
+        last_name = []
+        first_name.append(result[0][1])
+        last_name.append(result[0][2])
+        full_name = first_name[0] + ' ' + last_name[0]
+        return full_name
