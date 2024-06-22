@@ -13,14 +13,10 @@ def create_app():
     # TODO: Register the Blueprints imported from the files above
     # ================================ YOUR CODE HERE ============================== #
 
-    app.register_blueprint(external_routes_blueprint)
-    app.register_blueprint(internal_routes_blueprint)
-
     # TODO: Complete the wiring method below by providing the routes to wire to our app
     # ================================ YOUR CODE HERE ============================== #
 
-    app.container.wire(modules=[external_routes.__name__,
-                                internal_routes.__name__])
+    app.container.wire(modules=[])
     return app
 
 

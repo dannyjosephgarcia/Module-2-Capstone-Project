@@ -30,31 +30,52 @@ In order to successfully complete this project, you'll need to import all packag
 3. Execute the `pip install -r requirements.txt` command and press enter. All packages should install successfully
 For further guidance, please refer to the `Lesson 21: Capston Project Walkthrough` video at the end of the 
 
-### Step 3: Familiarize Yourself with the Code
+### Step 4: Familiarize Yourself with the Code
 There are 2 main objectives to this project: completing the code found in the `internal_routes.py` as well as the code
 found in the `external_routes.py` files. The code in the `internal_routes.py` file queries the `sakila.actor` table in 
 the MySQL Database set in Lesson 8. If you didn't install this, you'll need to open MySQL Workbench, create a new schema
 called 'sakila' and run the SQL statement found in the `initialize-actor-table.sql` table
 
-### Step 4: Follow the TODOs in the 'internal_rotes_model.py' file
+### Step 5: Follow the TODOs in the 'internal_routes_model.py' file
 There is a single TODO statement found inside this file. It should be VERY simple to implement.
 
-### Step 5: Follow the TODOs in the 'internal_routes.py' file
+### Step 6: Follow the TODOs in the 'mysql_database_service' file
+You'll need to use the 'mysql.connector' library to set up a database connection AND perform a database query
+
+### Step 7: Update the container.py file
+The `container.py` file will need to be updated for dependency injection
+
+### Step 8: Follow the TODOs in the 'internal_routes.py' file
 In this file, you'll complete the route to return the expected results from the query to the `sakila.actor` table. 
 Note that this will require you to alter both the `container.py` and `mysql_database_service.py` files.
 View the project walkthrough video for hints...
 
-### Step 6: Follow the TODOs in the 'test_internal_routes.py' file
+### Step 9: Update the app.py file
+The `app.py` file will need to have blueprints registered and modules wired. Only the internal routes items need to be 
+set now
+
+### Step 10: Follow the TODOs in the 'test_internal_routes.py' file
 After successfully completing the route found in `internal_routes.py`, you'll need to complete the unittests using the 
 Flask app test_client() to allow them all to pass
 
-### Step 7: Follow the TODOs in the 'external_routes.py' file
+### Step 11: Follow the TODOs in the 'external_routes_model.py' file
+Parsing of the request and setting of attributes needs to be performed
+
+### Step 12: Follow the TODOs in the 'external_api_service.py' file
+In order to successfully receive a response from the DummyAPIClient class, the request must be formatted correctly. 
+Refer to the project walkthrough video for guidance
+
+### Step 13: Follow the TODOs in the 'external_routes.py' file
 Shifting focus to the API within the `external_routes.py` file, this API actually commits a POST request to a 'dummy' 
 website to retrieve a response. You're goal is to follow the logical trails of TODOs to obtain a successful 200 response
 
-### Step 8: Follow the TODOs in the `test_external_routes.py` file
-Upon completion of your API, you'll need to write tests that perform the following checks to ensure functionality
-1. Raise a 500 if 
-2. Return a 200 http status code for a successful execution of the API
+### Step 14: Update the container.py file
+The `container.py` file will need to be updated for dependency injection
 
-If you have any questions, please email us at nextlevelcodingacademy@gmail.com for further assistance
+### Step 15: Update the app.py file
+The `app.py` file will need to have blueprints registered and modules wired
+
+### Step 16: Follow the TODOs in the 'test_external_routes.py' file
+Upon completion of your API, you'll need to write tests that perform checks to ensure your app runs correctly!
+
+If you have any questions, please email us at nextlevelcodingacademy@gmail.com for further assistance!

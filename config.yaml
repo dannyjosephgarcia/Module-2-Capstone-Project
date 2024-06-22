@@ -3,3 +3,5 @@ database:
   database_name: "sakila"
   username: ${USERNAME}
   password: ${PASSWORD}
+dummyapi:
+  base_url: https://dummy.restapiexample.com
