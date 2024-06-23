@@ -11,10 +11,10 @@ class MySQLDatabaseService:
         self.initialize_db_connection()
 
     def initialize_db_connection(self):
-        self.cnx = mysql.connector.connect(user=self.username,
-                                           password=self.password,
-                                           host=self.host,
-                                           database=self.database)
+        # TODO: Use the mysql.connector library to create a connection to your MySQL Database and assign it to
+        #  the self.cnx attribute
+        # ================================ YOUR CODE HERE ============================== #
+        return None
 
     def execute_internal_route_query(self, first_name):
         # TODO: Complete this class method to return the first and last name of the individual contained in the request.
